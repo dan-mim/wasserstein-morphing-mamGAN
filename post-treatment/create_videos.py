@@ -41,5 +41,5 @@ def create_video_from_images(folder_path, output_name="output.mp4", fps=10):
     print(f"Vidéo créée et sauvegardée sous {output_name}")
 
 # Utilisation de la fonction
-create_video_from_images("../results_MAM/MAM_projNorm0", "results_MAM/MAM_projNorm0RGB.mp4", fps=2)
-create_video_from_images("../results_MAM/MAM_projNorm0GAN", "results_MAM/MAM_projNorm0RGB_GAN.mp4", fps=2)
+create_video_from_images("../results_MAM/MAM_projNorm0", "results_MAM/MAM_projNorm0.mp4", fps=2)
+# create_video_from_images("../results_MAM/MAM_projNorm0GAN", "results_MAM/MAM_projNorm0RGB_GAN.mp4", fps=2)

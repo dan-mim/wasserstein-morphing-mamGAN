@@ -127,6 +127,22 @@ python run_barycenter_of_pics_mamGAN.py \
 
 ---
 
+## 🎨 Artistic Visuals via ℓ⁰ Projection
+
+Beyond projecting onto the GAN latent space, this project also investigates the effect of using an **ℓ⁰ (sparsity) projection** at each iteration of the MAM algorithm.  
+Instead of constraining the barycenter to lie on a learned generative manifold, we enforce sparsity by projecting each color channel independently onto a sparse support — retaining only the most significant pixel intensities.
+
+This constraint leads to **distinctive artistic outputs**: the resulting images display **poster-like aesthetics**, enhanced contrast, and bold geometric simplifications.  
+Each color behaves autonomously, allowing for **creative decompositions** that amplify dominant structures while preserving the morphing behavior.
+
+This experimental setting illustrates the versatility of constrained optimal transport not only as a mathematical optimization tool, but also as a framework for **aesthetic and interpretable visual synthesis**.
+
+<p align="center">
+  <img src="results_MAM/demo.gif" width="400"/>
+</p>
+
+---
+
 ## 📜 License
 
 For academic use, please cite the original references listed above.
