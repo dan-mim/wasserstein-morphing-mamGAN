@@ -126,7 +126,7 @@ python run_barycenter_of_pics_mamGAN.py \
 </p>
 
 <p align="center">
-  <img src="results_MAM/evolution.PNG" width="1500"/>
+  <img src="results_MAM/evolution.PNG" width="1000"/>
 </p>
 
 ---
