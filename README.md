@@ -63,25 +63,22 @@ python visualization.py --input outputs/res_mamgan.pkl
 - **`run_barycenter_of_pics_mamGAN.py`**: Uses 3 input images from a dataset and computes their barycenter via GAN projection.
 
 ---
-## 🧩 Scientific Context and Extensions
+## 🧩 Scientific Context and Foundations
 
-This project builds upon and extends two major lines of research:
+This project is grounded in and extends the framework introduced by:
 
-- 🖼️ **Image Barycenters with GANs**  
-  The idea of computing barycenters in the latent space of generative models was first explored in  
-  📄 *Simon et al., “Barycenters of Images with GANs”* [(arXiv:1912.11545)](https://arxiv.org/pdf/1912.11545),  
-  and implemented in [this repository](https://github.com/drorsimon/image_barycenters).  
-  Their work proposed using **Sinkhorn barycenters** in the latent space of **pretrained DCGANs**, allowing image interpolation with learned priors.  
-  Our project revisits this idea with a stronger mathematical backbone, using **exact solvers** like **MAM** instead of entropic methods, and extending the pipeline to multiple GAN types (DCGAN, Pix2Pix).
+- 📘 **Mimouni et al., “Constrained Wasserstein Barycenters”**  
+  [📄 Read the article](https://dan-mim.github.io/files/constrained_Wasserstein.pdf) | [🔗 GitHub](https://github.com/dan-mim/Constrained-Optimal-Transport)  
+  This work proposes a **general operator-splitting approach** to compute Wasserstein barycenters under convex or nonconvex constraints — including projections onto generative manifolds or sparsity structures.  
+  It formalizes the computation of barycenters with constraints using **Douglas–Rachford (DR) iterations** and shows how heuristic projections (e.g., onto GAN priors) can be efficiently integrated within this exact framework.
 
-- 🧠 **Constrained Optimal Transport**  
-  This project also relies on recent advances in constrained OT formulations described in:  
-  📘 *Mimouni et al., “Constrained Wasserstein Barycenters”* [(PDF)](https://dan-mim.github.io/files/constrained_Wasserstein.pdf)  
-  → GitHub: [Constrained-Optimal-Transport](https://github.com/dan-mim/Constrained-Optimal-Transport)  
-  The paper provides a **general operator-splitting framework** to incorporate constraints in Wasserstein barycenter computation, such as projections onto GAN manifolds or sparse supports.  
-  The associated implementation has been tested and optimized for **industrial use** and is currently deployed at **IFPEN** for **energy system optimization**.
+- 🖼️ **Simon et al., “Barycenters of Images with GANs”** [(arXiv:1912.11545)](https://arxiv.org/pdf/1912.11545)  
+  [🔗 GitHub](https://github.com/drorsimon/image_barycenters)  
+  This earlier work empirically demonstrated the value of computing **Sinkhorn barycenters in GAN latent space**, enabling visually coherent interpolations. However, it relied on entropic smoothing and lacked theoretical guarantees.
 
-Together, these two sources shape the foundation of **mamGAN**, bridging theoretical precision, practical scalability, and visual quality for high-fidelity barycentric morphing.
+> 🧠 The contribution of Mimouni et al. can be seen as a **generalization** and **formalization** of the idea proposed by Simon et al., bringing a **rigorous optimization-based structure** to latent-space barycenter computation — particularly through the lens of constrained and nonconvex optimization.
+
+This repository — **mamGAN** — directly implements that theoretical backbone, especially by exploiting the **heuristic projection mechanism introduced in the nonconvex case** of Mimouni et al. The result is a framework that is both **interpretable and performant**, capable of computing high-fidelity barycenters across a wide range of GANs and datasets.
 
 ---
 
