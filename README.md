@@ -24,7 +24,7 @@ This repository explores **image morphing** through **Wasserstein barycenters** 
 - **MAM (Method of Averaged Marginals)**: an exact, operator-splitting-based OT solver see [our article for more](https://arxiv.org/pdf/2309.05315).
 
 The morphing effect is achieved by computing Wasserstein barycenters between multiple images **after mapping them to a latent space**, then **re-generating images** using GANs.
-This project aims to present an efficient and interpretable method to improve the realistic appearance and structural quality of Wasserstein barycenters, especially in the challenging case where the barycenter involves more than two input images.
+This project aims to present an efficient and interpretable method to improve the realistic appearance and structural quality of Wasserstein barycenters, especially in the challenging case where **the barycenter involves more than two input images**.
 By leveraging the Method of Averaged Marginals (MAM) and projecting barycenters into a generative latent space, the resulting morphings preserve both content fidelity and visual coherence.
 
 ---
