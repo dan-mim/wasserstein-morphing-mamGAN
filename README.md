@@ -27,11 +27,11 @@ The morphing effect is achieved by computing Wasserstein barycenters between mul
 This project aims to present an efficient and interpretable method to improve the realistic appearance and structural quality of Wasserstein barycenters, especially in the challenging case where **the barycenter involves more than two input images**.
 By leveraging the Method of Averaged Marginals (MAM) and projecting barycenters into a generative latent space, the resulting morphings preserve both content fidelity and visual coherence.
 
-Colored barycenter:
+Colored barycenter leads to a unrealistic shoe:
 <p align="center">
   <img src="results_MAM/10000s_7393864_8069538_5098.065359476964.png" width="1000"/>
 </p>
-Realistic morphisme:
+Realistic morphisme mamGAN leads to a realistic result for stage of the morphism:
 <p align="center">
   <img src="results_MAM/evolution.PNG" width="1000"/>
 </p>
