@@ -2,7 +2,7 @@
 <h1 align="center">🌀 Wasserstein Morphing with mamGAN</h1>
 
 <p align="center">
-  <em>Wasserstein barycenter-based image morphing using both Sinkhorn and the Method of Averaged Marginals (MAM), projected into the latent space of pretrained GANs.</em>
+  <em>Wasserstein barycenter-based image morphing using the Method of Averaged Marginals (MAM), projected into the latent space of pretrained GANs.</em>
 </p>
 
 <p align="center">
@@ -21,13 +21,15 @@
 This repository explores **image morphing** through **Wasserstein barycenters** computed in the **latent space of pretrained GANs**. It supports both:
 
 - **Sinkhorn regularized OT**, and
-- **MAM (Method of Averaged Marginals)**: an exact, operator-splitting-based OT solver.
+- **MAM (Method of Averaged Marginals)**: an exact, operator-splitting-based OT solver see [our article for more](https://arxiv.org/pdf/2309.05315).
 
 The morphing effect is achieved by computing Wasserstein barycenters between multiple images **after mapping them to a latent space**, then **re-generating images** using GANs.
+This project aims to present an efficient and interpretable method to improve the realistic appearance and structural quality of Wasserstein barycenters, especially in the challenging case where the barycenter involves more than two input images.
+By leveraging the Method of Averaged Marginals (MAM) and projecting barycenters into a generative latent space, the resulting morphings preserve both content fidelity and visual coherence.
 
 ---
 
-## 📦 Project Structure
+## 📦 Package Structure
 
 ```
 mam_bary/
@@ -61,15 +63,25 @@ python visualization.py --input outputs/res_mamgan.pkl
 - **`run_barycenter_of_pics_mamGAN.py`**: Uses 3 input images from a dataset and computes their barycenter via GAN projection.
 
 ---
+## 🧩 Scientific Context and Extensions
 
-## 📚 References
+This project builds upon and extends two major lines of research:
 
-This work builds upon:
-- 📄 **Dror Simon et al.** [Barycenters of Images with GANs](https://arxiv.org/pdf/1912.11545)  
-  → GitHub: https://github.com/drorsimon/image_barycenters
-- 📘 **Mimouni et al.** [Constrained Wasserstein Barycenters (2024)](https://dan-mim.github.io/files/constrained_Wasserstein.pdf)  
-  → Code: https://github.com/dan-mim/Constrained-Optimal-Transport  
-  (⚙️ Used in production at IFPEN for large-scale energy optimization)
+- 🖼️ **Image Barycenters with GANs**  
+  The idea of computing barycenters in the latent space of generative models was first explored in  
+  📄 *Simon et al., “Barycenters of Images with GANs”* [(arXiv:1912.11545)](https://arxiv.org/pdf/1912.11545),  
+  and implemented in [this repository](https://github.com/drorsimon/image_barycenters).  
+  Their work proposed using **Sinkhorn barycenters** in the latent space of **pretrained DCGANs**, allowing image interpolation with learned priors.  
+  Our project revisits this idea with a stronger mathematical backbone, using **exact solvers** like **MAM** instead of entropic methods, and extending the pipeline to multiple GAN types (DCGAN, Pix2Pix).
+
+- 🧠 **Constrained Optimal Transport**  
+  This project also relies on recent advances in constrained OT formulations described in:  
+  📘 *Mimouni et al., “Constrained Wasserstein Barycenters”* [(PDF)](https://dan-mim.github.io/files/constrained_Wasserstein.pdf)  
+  → GitHub: [Constrained-Optimal-Transport](https://github.com/dan-mim/Constrained-Optimal-Transport)  
+  The paper provides a **general operator-splitting framework** to incorporate constraints in Wasserstein barycenter computation, such as projections onto GAN manifolds or sparse supports.  
+  The associated implementation has been tested and optimized for **industrial use** and is currently deployed at **IFPEN** for **energy system optimization**.
+
+Together, these two sources shape the foundation of **mamGAN**, bridging theoretical precision, practical scalability, and visual quality for high-fidelity barycentric morphing.
 
 ---
 
@@ -111,8 +123,6 @@ python run_barycenter_of_pics_mamGAN.py \
 ---
 
 ## 📜 License
-
-MIT © 2024 — Daniel Mimouni
 
 For academic use, please cite the original references listed above.
 
