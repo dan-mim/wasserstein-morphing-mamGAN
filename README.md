@@ -30,6 +30,9 @@ By leveraging the Method of Averaged Marginals (MAM) and projecting barycenters 
 <p align="center">
   <img src="results_MAM/10000s_7393864_8069538_5098.065359476964.png" width="1000"/>
 </p>
+<p align="center">
+  <img src="results_MAM/evolution.PNG" width="1000"/>
+</p>
 
 ---
 
@@ -125,9 +128,7 @@ python run_barycenter_of_pics_mamGAN.py \
   <img src="results_MAM/projectionS_20_iterations_3pics_8082348_7871491_7750312_6537.83616557746.png" width="300"/>
 </p>
 
-<p align="center">
-  <img src="results_MAM/evolution.PNG" width="1000"/>
-</p>
+
 
 ---
 
