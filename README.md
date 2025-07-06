@@ -138,7 +138,7 @@ Each color behaves autonomously, allowing for **creative decompositions** that a
 This experimental setting illustrates the versatility of constrained optimal transport not only as a mathematical optimization tool, but also as a framework for **aesthetic and interpretable visual synthesis**.
 
 <p align="center">
-  <img src="results_MAM/demo.gif" width="400"/>
+  <img src="results_MAM/MAM_projNorm0RGB.gif" width="400"/>
 </p>
 
 ---
