@@ -126,12 +126,6 @@ python run_barycenter_of_pics_mamGAN.py \
   --model pix2pix --projection gan --solver mam
 ```
 
-Evolution over the iterations of the barycenter between 3 shoes, on the left hand side the MAM result, on the right hand side the result with the GAN projection.
-<p align="center">
-  <img src="results_MAM/projectionS_20_iterations_3pics_8082348_7871491_7750312_6537.83616557746.png" width="300"/>
-</p>
-
-
 
 ---
 
@@ -148,6 +142,12 @@ Each color behaves autonomously, allowing for **creative decompositions** that a
   <img src="results_MAM/MAM_projNorm0RGB.gif" width="200"/>
 </p>
 
+---
+## 🧩 More results
+Evolution over the iterations of the barycenter between 3 shoes, on the left hand side the MAM result, on the right hand side the result with the GAN projection.
+<p align="center">
+  <img src="results_MAM/projectionS_20_iterations_3pics_8082348_7871491_7750312_6537.83616557746.png" width="300"/>
+</p>
 ---
 
 ## 📜 License
