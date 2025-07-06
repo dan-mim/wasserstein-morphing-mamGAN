@@ -132,10 +132,9 @@ python run_barycenter_of_pics_mamGAN.py \
 Beyond projecting onto the GAN latent space, this project also investigates the effect of using an **ℓ⁰ (sparsity) projection** at each iteration of the MAM algorithm.  
 Instead of constraining the barycenter to lie on a learned generative manifold, we enforce sparsity by projecting each color channel independently onto a sparse support — retaining only the most significant pixel intensities.
 
+We studied the impact of non-convex constraints in our [article](https://dan-mim.github.io/files/constrained_Wasserstein.pdf) and showed that this type of constraints can lead to non exact barycenter this is why the images are more artistics.
 This constraint leads to **distinctive artistic outputs**: the resulting images display **poster-like aesthetics**, enhanced contrast, and bold geometric simplifications.  
 Each color behaves autonomously, allowing for **creative decompositions** that amplify dominant structures while preserving the morphing behavior.
-
-This experimental setting illustrates the versatility of constrained optimal transport not only as a mathematical optimization tool, but also as a framework for **aesthetic and interpretable visual synthesis**.
 
 <p align="center">
   <img src="results_MAM/MAM_projNorm0RGB.gif" width="200"/>
