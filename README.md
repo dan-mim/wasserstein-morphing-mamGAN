@@ -124,6 +124,9 @@ python run_barycenter_of_pics_mamGAN.py \
 <p align="center">
   <img src="results_MAM/projectionS_20_iterations_3pics_8082348_7871491_7750312_6537.83616557746.png" width="300"/>
 </p>
+<p align="center">
+  <img src="results_MAM/evolution.PNG" width="1500"/>
+</p>
 
 ---
 
@@ -133,7 +136,7 @@ Beyond projecting onto the GAN latent space, this project also investigates the 
 Instead of constraining the barycenter to lie on a learned generative manifold, we enforce sparsity by projecting each color channel independently onto a sparse support — retaining only the most significant pixel intensities.
 
 We studied the impact of non-convex constraints in our [article](https://dan-mim.github.io/files/constrained_Wasserstein.pdf) and showed that this type of constraints can lead to non exact barycenter this is why the images are more artistics.
-This constraint leads to **distinctive artistic outputs**: the resulting images display **poster-like aesthetics**, enhanced contrast, and bold geometric simplifications.  
+This constraint leads to **distinctive artistic outputs**: the resulting images display **poster-like aesthetics**, enhanced contrast, and bold geometric simplifications.
 Each color behaves autonomously, allowing for **creative decompositions** that amplify dominant structures while preserving the morphing behavior.
 
 <p align="center">
