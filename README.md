@@ -122,7 +122,7 @@ python run_barycenter_of_pics_mamGAN.py \
 ```
 
 <p align="center">
-  <img src="results_MAM/projectionS_20_iterations_3pics_8082348_7871491_7750312_6537.83616557746.png" width="1000"/>
+  <img src="results_MAM/projectionS_20_iterations_3pics_8082348_7871491_7750312_6537.83616557746.png" width="500"/>
 </p>
 
 ---
