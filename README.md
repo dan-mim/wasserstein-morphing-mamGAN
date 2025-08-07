@@ -18,7 +18,9 @@
 
 ## 🚀 Overview
 
-This repository explores **image morphing** through **Wasserstein barycenters** computed in the **latent space of pretrained GANs**. It supports both:
+This repository explores **image morphing** through **Wasserstein barycenters** computed in the **latent space of pretrained GANs**.
+This repository is inspired by the very interesting publication of Dror Simon and Avia Aberman, which you can find [here](https://openaccess.thecvf.com/content_CVPR_2020/papers/Simon_Barycenters_of_Natural_Images__Constrained_Wasserstein_Barycenters_for_Image_CVPR_2020_paper.pdf). I also invite you to refer to the codes of Dror Simon [here](https://github.com/drorsimon/image_barycenters). In this extension we propose a more legitimate approach due to the research published in our [recent article](https://dan-mim.github.io/files/constrained_Wasserstein.pdf) but also mostly a more general framework because this algorithm can deal with the morphing of more than 2 images by leveraging [Wasserstein barycenter efficient algorithms](https://github.com/dan-mim/Computing-Wasserstein-Barycenters-MAM).
+It supports both:
 
 - **Sinkhorn regularized OT**, and
 - **MAM (Method of Averaged Marginals)**: an exact, operator-splitting-based OT solver see [our article for more](https://arxiv.org/pdf/2309.05315).
